@@ -26,10 +26,4 @@ def history(pattern):
 		output = line[line.find(';') + 1:].strip('\n')
 		print(str(index + 1) + " " + output)
 
-if sys.argv[1] == "h":
-	history(sys.argv[2])
-elif sys.argv[1] == "d":
-	command = "cd " + sys.argv[2]
-	history(command)
-else:
-	print("invalid param")
+history(sys.argv[1])
