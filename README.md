@@ -20,6 +20,8 @@ To call a specific line, you just need to type the number(for eaxmple `1`):
 1
 ```
 
+![](http://images.bestswifter.com/1478184206.png)
+
 ## How to install
 
 Firstly, you need to clone the repository:
