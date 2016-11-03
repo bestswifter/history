@@ -4,12 +4,14 @@ History is a zsh script which internally uses python to handle data.
 
 With this script, you can easily find any command you've executed and call it again.
 
+Your command history is stored **permanently**, you will not lose them even restaring your computer.
+
 ## How to use
 
-Use command `h` followed by key word you want to search:
+Use command `h` followed by key word you want to search, for example, you don't remember how to execute `xcodebuild`
 
 ```bash
-h grep
+h xcodebuild
 ```
 
 Then you will get all commands contains 'grep', each line begins with a number.
@@ -17,8 +19,10 @@ Then you will get all commands contains 'grep', each line begins with a number.
 To call a specific line, you just need to type the number(for eaxmple `1`):
 
 ```bash
-1
+21
 ```
+
+As the picture below shows:
 
 ![](http://images.bestswifter.com/1478184206.png)
 
@@ -38,6 +42,8 @@ function h() {
     cat ~/.history/.histfile_func | while read -r line; do eval "$line" &>/dev/null;done
 }
 ```
+
+## 
 
 ## TO-DO
 
