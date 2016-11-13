@@ -34,7 +34,7 @@ It means you want to see 10 commands which are most frequently called.
 
 As the picture below shows:
 
-![](http://images.bestswifter.com/1478184206.png)
+![](http://images.bestswifter.com/1479040745.png)
 
 ## How to install
 
@@ -43,7 +43,7 @@ The only thing you need to do is to add the script below to your .zshrc to make 
 ```bash
 function h(){
     history | grep --color=always $1 | awk '{$1="";print $0}' | sort | uniq -c | sort -rn | awk '{$1="";print NR " " $0}' | tee ~/.histfile_color_result | sed -r "s/\x1B\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g" | awk '{$1="";print "function " NR "() {" $0 " }"}' | {while read line; do eval $line &>/dev/null; done}
-    cat ~/.histfile_color_result
+    cat ~/.histfile_color_result | sed '1!G;h;$!d'
 }
 ```
 
