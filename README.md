@@ -34,7 +34,7 @@ It means you want to see 10 commands which are most frequently called.
 
 As the picture below shows:
 
-![](http://images.bestswifter.com/1479040745.png)
+![](http://images.bestswifter.com/1479040989.png)
 
 ## How to install
 
