@@ -16,10 +16,10 @@ h xcodebuild
 
 Then you will get all commands contains 'grep', each line begins with a number.
 
-To call a specific line, you just need to enter the number(for eaxmple `1`):
+To call a specific line, you just need to enter the number(say you want to the first command):
 
 ```bash
-21
+1
 ```
 
 If there are too many results, you can pipe it to less or use tail -n:
