@@ -42,10 +42,10 @@ The only thing you need to do is to add the script below to your .zshrc to make 
 
 ```bash
 function h(){
-    history | grep --color=always $1 | awk '{$1="";print $0}' |\ # 查找关键字，去掉左侧的是数字
-    sort | uniq -c | sort -rn | awk '{$1="";print NR " " $0}' |\ # 先去重（需要排序）然后根据次数排序，再去掉次数
-    tee ~/.histfile_color_result | sed -r "s/\x1B\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g" |\  # 把带有颜色的结果写入临时文件，然后去除颜色
-    awk '{$1="";print "function " NR "() {" $0 "; echo \": $(date +%s):0;"$0"\" >> ~/.histfile }"}' |\ # 构造 function，把 $0 写入到 histfile 中
+    history | grep --color=always $1 | awk '{$1="";print $0}' | # 查找关键字，去掉左侧的是数字 \
+    sort | uniq -c | sort -rn | awk '{$1="";print NR " " $0}' | # 先去重（需要排序）然后根据次数排序，再去掉次数 \
+    tee ~/.histfile_color_result | sed -r "s/\x1B\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g" |  # 把带有颜色的结果写入临时文件，然后去除颜色 \
+    awk '{$1="";print "function " NR "() {" $0 "; echo \": $(date +%s):0;"$0"\" >> ~/.histfile }"}' | # 构造 function，把 $0 写入到 histfile 中 \
     {while read line; do eval $line &>/dev/null; done}  # 调用 eval，让 function 生效
     cat ~/.histfile_color_result | sed '1!G;h;$!d' # 倒序输出，更容易看到第一条
 }
