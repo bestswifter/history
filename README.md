@@ -77,4 +77,4 @@ I recommand you to use iTerm3 + zsh
 - [x] Use shell command `history` instead of grep a file
 - [ ] ~~Support serach directories you've visited~~(I think autojump is a better choice in most cases)
 
-For any suggestion or improvent or bug-fix, feel free to create an issue or make a pull request.
+For any suggestion or improvment or bug-fix, feel free to create an issue or make a pull request.
