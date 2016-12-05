@@ -73,8 +73,8 @@ I recommand you to use iTerm3 + zsh
 
 ## TO-DO
 
-1. Limit maximum lines of output
-2. Use shell command `history` instead of grep a file
-3. Support serach directories you've visited
+- [x] Limit maximum lines of output (Marked as completed because now you can use less/more)
+- [x] Use shell command `history` instead of grep a file
+- [ ] ~~Support serach directories you've visited~~(I think autojump is a better choice in most cases)
 
 For any suggestion or improvent or bug-fix, feel free to create an issue or make a pull request.
