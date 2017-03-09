@@ -50,7 +50,7 @@ function h(){
     cat ~/.histfile_color_result | sed '1!G;h;$!d' # 倒序输出，更容易看到第一条
 }
 ```
-If you get an error: `illegal option -- r`，just remove the `-r` parameter in `sed` command：
+If you get an error: `sed: illegal option -- r`，just remove the `-r` parameter in `sed` command：
 
 ```bash
 function h(){
@@ -63,6 +63,11 @@ function h(){
 }
 ```
 
+Sometimes, when you execute command `which 1` in iTerm, you may get such an output which means that history doesn't work: `1: aliased to cd -`. This is usually because your system has defined an alias called `1` for you and override your new alias.  avoid this, you can find out where these alias are: 
+
+![](http://images.bestswifter.com/1489024112.png)
+
+So just execute `vim ./.oh-my-zsh/lib/directories.zsh` in your user dictory(`~`), and add `# ` to those nine lines.
 
 ## Feature
 
