@@ -63,7 +63,7 @@ function h(){
 }
 ```
 
-Sometimes, when you execute command `which 1` in iTerm, you may get such an output which means that history doesn't work: `1: aliased to cd -`. This is usually because your system has defined an alias called `1` for you and override your new alias.  avoid this, you can find out where these alias are: 
+Sometimes, when you execute command `which 1` in iTerm, you may get such an output which means that history doesn't work: `1: aliased to cd -`. This is usually because your system has defined an alias called `1` for you and override your new alias. To  avoid this, you can find out where these alias are: 
 
 ![](http://images.bestswifter.com/1489024112.png)
 
