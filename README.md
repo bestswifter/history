@@ -57,7 +57,7 @@ Sometimes, when you execute command `which 1` in iTerm, you may get such an outp
 
 ![](http://images.bestswifter.com/1489024112.png)
 
-So just execute `vim ./.oh-my-zsh/lib/directories.zsh` in your user dictory(`~`), and add `# ` to those nine lines.
+So just execute `vim ~/.oh-my-zsh/lib/directories.zsh` and add `# ` to those nine lines.
 
 ## Feature
 
