@@ -84,6 +84,7 @@ I recommand you to use iTerm3 + zsh
 - [x] Limit maximum lines of output (Marked as completed because now you can use less/more)
 - [x] Use shell command `history` instead of grep a file
 - [ ] ~~Support serach directories you've visited~~(I think autojump is a better choice in most cases)
-- [ ] Avoid output like `1. h xxx` because I think it is meaningless
+- [x] Avoid output like `1. h xxx` because I think it is meaningless
+- [] Fix bug that command is not stored in histfile
 
 For any suggestion or improvment or bug-fix, feel free to create an issue or make a pull request.
